@@ -16,7 +16,7 @@ class Category(models.Model):
         return self.friendly_name
 
 
-class Products(models.Model):
+class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=350)
     author = models.CharField(max_length=350, null=True, blank=True)
