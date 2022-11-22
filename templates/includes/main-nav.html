@@ -1,0 +1,37 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="title-font font-weight-bold nav-link text-yellow mr-5" href="{% url 'index' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="title-font text-yellow mx-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Graphic Novels
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="#" class="dropdown-item">All Graphic Novels</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="title-font text-yellow mx-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DC Comics
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="title-font text-yellow mx-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Marvel Comics
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="title-font text-yellow mx-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tin Tin
+            </a>
+        </li>
+    </ul>
+</div>

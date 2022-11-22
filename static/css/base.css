@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+}
+  
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #0e0e0e;
+}
+  
+a,
+.title-font {
+    font-family: 'Bangers', cursive;
+    color: #d7e81e;
+    text-decoration: none;
+}
+
+.yellow-items {
+    color: #d7e81e;
+}
+
+#main-nav,
+#delivery-banner {
+    background-color: #0e0e0e;
+    color: #d7e81e;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.space-container {
+    height: 125px !important;
+    background-color: #0e0e0e;
+}
+  
+.header-container {
+    height: 164px;
+    background-color: #0e0e0e;
+}
+  
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    
+      > .col,
+      > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+      }
+}
+
+#navbar {
+    background-color: #0e0e0e;
+}
+
+.breadcrumb {
+    background-color: #0e0e0e !important;
+}
+
+.bg-black {
+    background-color: #0e0e0e;
+    margin: 2px;
+    color: #d7e81e;
+}
+  
+.text-black {
+    color: black;
+}
+  
+.link-row {
+    height: 250px;
+}
+  
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+  
+.link-btn {
+    margin-top: 5px;
+}
+  
+.dropdown-menu {
+    background-color: #f8f9fa;
+}
+
+/* Adding items to basket styles */
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus,
+.btn-sedondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+    background: black !important;
+    color: white !important;
+}
+  
+  
+/* Media Queries */
+  
+@media screen and (max-width: 575px) {
+    .link-row {
+        height: 50vh;
+        margin: 2px !important;
+    }
+  
+    .card-img-overlay {
+        padding-top: 15px !important;
+    }
+  
+    .card-title {
+        margin-bottom: 5px !important;
+    }
+  
+    .link-box {
+        max-height: 150px !important;
+    }
+  
+    .link-btn {
+        height: 40px;
+        padding: 0px;
+    }
+}

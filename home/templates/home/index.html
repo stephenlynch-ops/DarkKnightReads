@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container space-container p-0 mx-1 my-auto">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container header-container p-0 my-auto d-none d-md-block">
+        <div class="row w-100">
+            <div class="col"></div>
+        </div>
+    </div>
+<!-- Links To Pages -->
+<div id="link-container" class="container-md mt-1">
+    <div class="col-12 mx-auto">
+        <div class="row link-row w-100 m-0">
+            <div id="dc-comics-link-box" class="col-sm col-md-7 h-100 link-box m-1 p-0">
+                <div class="card text-center h-100 bg-dark">
+                    <a href="#" class="image-link h-100 text-white">
+                        <div class="opaque-overlay">&nbsp;</div>
+                        <img src="/media/dc_comics_super_heroes.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <div class="card-img-overlay pt-5">
+                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop DC Comics</a>
+                        </div>
+                    </a>
+                </div>    
+            </div>
+            <div id="batman-link-box" class="col-sm col-md h-100 link-box m-1 p-0">
+                <div class="card text-center h-100 bg-dark">
+                    <a href="#" class="image-link h-100 text-white">
+                        <div class="opaque-overlay">&nbsp;</div>
+                        <img src="/media/batman_image.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <div class="card-img-overlay pt-5">
+                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Batman</a>
+                        </div>
+                    </a>
+                </div>    
+            </div>
+        </div>
+        <div class="w-100 m-1"></div>
+        <div class="row link-row w-100 m-0">
+            <div id="tintin-link-box" class="col-sm col-md h-100 link-box m-1 p-0">
+                <div class="card text-center h-100 bg-dark">
+                    <a href="#" class="image-link h-100 text-white">
+                        <div class="opaque-overlay">&nbsp;</div>
+                        <img src="/media/tintin_characters.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <div class="card-img-overlay pt-5">
+                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Tin Tin</a>
+                        </div>
+                    </a>    
+                </div>    
+            </div>
+            <div id="marvel-link-box" class="col-sm col-md-7 h-100 link-box m-1 p-0">
+                <div class="card text-center h-100 bg-dark">
+                    <a href="#" class="image-link h-100 text-white">
+                        <div class="opaque-overlay">&nbsp;</div>
+                        <img src="/media/marvel_comics_super_heros.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <div class="card-img-overlay pt-5">
+                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Marvel</a>
+                        </div>
+                    </a>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
