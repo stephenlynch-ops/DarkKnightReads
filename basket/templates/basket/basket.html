@@ -44,10 +44,10 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.product.asin|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 yellow-items">${{ item.product.price }}</p>
+                                        <p class="my-0 yellow-items">£{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -78,15 +78,15 @@
                                         <a class="remove-item text-danger float-right yellow-items" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="yellow-items my-0">${{ item.product.price }}</p>
+                                        <p class="yellow-items my-0">£{{ item.product.price }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6 class="yellow-items"><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6 class="yellow-items">Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="yellow-items mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6 class="yellow-items"><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+                                    <h6 class="yellow-items">Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="yellow-items mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
@@ -141,9 +141,8 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        var url = `/basket/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {

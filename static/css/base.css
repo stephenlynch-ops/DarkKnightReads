@@ -16,7 +16,6 @@ a,
 
 .yellow-items {
     color: #d7e81e;
-    text-transform: uppercase;
 }
 
 #main-nav,
@@ -106,7 +105,9 @@ a:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
