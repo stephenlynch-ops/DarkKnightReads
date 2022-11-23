@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'home',
     'products',
+    'basket',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +78,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',  # Required to load non-item based images from Media
+                'basket.context.basket_contents',
             ],
         },
     },
