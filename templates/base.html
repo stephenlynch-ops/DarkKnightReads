@@ -42,13 +42,13 @@
             <div id="navbar" class="row pt-lg-2 d-none d-lg-flex">
 <!-- Site Name Section -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="#" class="nav-link main-logo-link">
+                    <a href="{% url 'products' %}" class="nav-link main-logo-link">
                         <h1 class="title-font my-0"><strong>Dark Knight Reads</strong></h1>
                     </a>
                 </div>
 <!-- Search Box Section -->
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <form action="#" method="GET">
+                    <form action="{% url 'products' %}" method="GET">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search The Store">
                             <div class="input-group-append">

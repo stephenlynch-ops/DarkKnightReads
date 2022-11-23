@@ -10,28 +10,43 @@
                 All Graphic Novels
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Graphic Novels</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Graphic Novels</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="title-font text-yellow mx-5" href="#" id="dc-comics-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 DC Comics
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="dc-link">
+                <a href="{% url 'products' %}?hero=batman" class="dropdown-item">Batman</a>
+                <a href="{% url 'products' %}?hero=superman" class="dropdown-item">Superman</a>
+                <a href="{% url 'products' %}?category=DC" class="dropdown-item">All DC</a>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="title-font text-yellow mx-5" href="#" id="marvel-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Marvel Comics
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="dc-link">
+                <a href="{% url 'products' %}?hero=x-men" class="dropdown-item">X-Men</a>
+                <a href="{% url 'products' %}?hero=superman" class="dropdown-item">Superman</a>
+                <a href="{% url 'products' %}?category=DC" class="dropdown-item">All Marvel</a>
+            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tin Tin
+            <a class="title-font text-yellow mx-5" href="#" id="casterman-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Other Publishers
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="dc-link">
+                <a href="{% url 'products' %}?hero=tintin" class="dropdown-item">Tintin</a>
+                <a href="{% url 'products' %}?hero=superman" class="dropdown-item">Superman</a>
+                <a href="{% url 'products' %}?category=Casterman,Other" class="dropdown-item">All Other Publishers</a>
+            </div>
         </li>
     </ul>
 </div>

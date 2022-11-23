@@ -19,8 +19,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(admin.ModelAdmin):
 
-    prepopulated_fields = {'name': ('friendly_name',), }
-
     list_display = (
         'friendly_name',
         'name',

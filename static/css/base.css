@@ -37,6 +37,11 @@ a:hover {
     height: 164px;
     background-color: #0e0e0e;
 }
+
+.second-header-container {
+    height: 82px;
+    background-color: #0e0e0e;
+}
   
 .no-gutters {
     margin-right: 0;

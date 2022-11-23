@@ -6,8 +6,8 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Catagories'
 
-    friendly_name = models.CharField(max_length=254)
-    name = models.SlugField(max_length=254, null=True, blank=True)
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -19,7 +19,9 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=350)
+    about_title = models.TextField(null=True, blank=True)
     author = models.CharField(max_length=350, null=True, blank=True)
+    about_author = models.TextField(null=True, blank=True)
     illustrator = models.CharField(max_length=350, null=True, blank=True)
     asin = models.CharField(max_length=254, null=True, blank=True)
     publisher = models.CharField(max_length=50, null=True, blank=True)
