@@ -21,22 +21,22 @@
         <div class="row link-row w-100 m-0">
             <div id="dc-comics-link-box" class="col-sm col-md-7 h-100 link-box m-1 p-0">
                 <div class="card text-center h-100 bg-dark">
-                    <a href="#" class="image-link h-100 text-white">
+                    <a href="{% url 'products' %}?category=DC" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
                         <img src="/media/dc_comics_super_heroes.jpg" class="card-img h-100 image-fluid" alt="#">
                         <div class="card-img-overlay pt-5">
-                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop DC Comics</a>
+                            <a href="{% url 'products' %}?category=DC" class="link-btn btn btn-dark p-2 mt-5">Shop DC Comics</a>
                         </div>
                     </a>
                 </div>    
             </div>
             <div id="batman-link-box" class="col-sm col-md h-100 link-box m-1 p-0">
                 <div class="card text-center h-100 bg-dark">
-                    <a href="#" class="image-link h-100 text-white">
+                    <a href="{% url 'products' %}?hero=batman" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
                         <img src="/media/batman_image.jpg" class="card-img h-100 image-fluid" alt="#">
                         <div class="card-img-overlay pt-5">
-                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Batman</a>
+                            <a href="{% url 'products' %}?hero=batman" class="link-btn btn btn-dark p-2 mt-5">Shop Batman</a>
                         </div>
                     </a>
                 </div>    
@@ -46,22 +46,22 @@
         <div class="row link-row w-100 m-0">
             <div id="tintin-link-box" class="col-sm col-md h-100 link-box m-1 p-0">
                 <div class="card text-center h-100 bg-dark">
-                    <a href="#" class="image-link h-100 text-white">
+                    <a href="{% url 'products' %}?hero=tintin" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
                         <img src="/media/tintin_characters.jpg" class="card-img h-100 image-fluid" alt="#">
                         <div class="card-img-overlay pt-5">
-                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Tin Tin</a>
+                            <a href="{% url 'products' %}?hero=tintin" class="link-btn btn btn-dark p-2 mt-5">Shop Tin Tin</a>
                         </div>
                     </a>    
                 </div>    
             </div>
             <div id="marvel-link-box" class="col-sm col-md-7 h-100 link-box m-1 p-0">
                 <div class="card text-center h-100 bg-dark">
-                    <a href="#" class="image-link h-100 text-white">
+                    <a href="{% url 'products' %}?category=DC" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
                         <img src="/media/marvel_comics_super_heros.jpg" class="card-img h-100 image-fluid" alt="#">
                         <div class="card-img-overlay pt-5">
-                            <a href="#" class="link-btn btn btn-dark p-2 mt-5">Shop Marvel</a>
+                            <a href="{% url 'products' %}?category=Marvel" class="link-btn btn btn-dark p-2 mt-5">Shop Marvel</a>
                         </div>
                     </a>
                 </div>    
