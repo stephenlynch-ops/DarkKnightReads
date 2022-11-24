@@ -1,23 +1,23 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
+        <li class="nav-item d-block d-md-none key-link">
             <a class="title-font font-weight-bold nav-link text-yellow mr-5" href="{% url 'index' %}" id="home-link">
                 Home
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown key-link">
             <a class="title-font text-yellow mx-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Graphic Novels
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0 text-decoration-none" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=hero&direction=asc" class="dropdown-item ">By Hero</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Graphic Novels</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="dc-comics-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown key-link">
+            <a class="title-font text-yellow mx-5 text-decoration-none" href="#" id="dc-comics-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 DC Comics
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dc-link">
@@ -27,8 +27,8 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="marvel-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown key-link">
+            <a class="title-font text-yellow mx-5 text-decoration-none" href="#" id="marvel-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Marvel Comics
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dc-link">
@@ -38,8 +38,8 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="title-font text-yellow mx-5" href="#" id="casterman-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown key-link">
+            <a class="title-font text-yellow mx-5 text-decoration-none" href="#" id="casterman-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Other Publishers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dc-link">

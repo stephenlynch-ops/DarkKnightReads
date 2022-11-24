@@ -52,9 +52,9 @@
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search The Store">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <button class="form-control btn btn-black border border-black rounded-0 search-icon" type="submit">
                                     <span class="icon">
-                                        <i class="fas fa-search yellow-items"></i>
+                                        <i class="fas fa-search"></i>
                                     </span>
                                 </button>
                             </div>
@@ -66,12 +66,12 @@
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown mx-2">
                             <a class="text-yellow nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                <div class="text-center key-link">
+                                    <div class="key-link"><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0 key-link" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="#" class="dropdown-item">Product Management</a>
@@ -86,8 +86,8 @@
                         </li>
                         <li class="list-inline-item mx-2">
                             <a class="{% if grand_total %}text_info font-weight-bold{% else %}text-yellow{% endif %} nav-link" href="{% url 'view_basket' %}">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div class="text-center key-link">
+                                    <div class="key-link"><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                             £{{ grand_total|floatformat:2 }}
@@ -105,21 +105,37 @@
             <div class="row bg-white">
                 <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #0e0e0e;">
                     <button class="navbar-toggler" type="button" data-wiggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigations">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon">
+                            <i class="fas fa-bars" style="color:#d7e81e; font-size:30px;"></i>
+                        </span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
             <div id="delivery-banner" class="row text-center">
-                <div class="col bg-black text-yellow m-0">
+                <div class="col m-0">
                     <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
                 </div>
             </div>
         </header>
 
         {% if messages %}
-            <div class="message-container"></div>
+            <div class="message-container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
         {% endif %}
 
         {% block page_header %}
@@ -129,6 +145,9 @@
         {% endblock %}
         
         {% block postloadjs %}
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
         {% endblock %}
         
     </body>
