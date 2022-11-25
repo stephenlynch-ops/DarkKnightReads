@@ -8,29 +8,6 @@ from products.models import Product
 
 
 class Order(models.Model):
-
-    SPECIAL_GIFT_HULK = "HU"
-    SPECIAL_GIFT_BATMAN = "BA"
-    SPECIAL_GIFT_WONDER = "WW"
-    SPECIAL_GIFT_THOR = "TH"
-    SPECIAL_GIFT_SPIDER = "SP"
-    SPECIAL_GIFT_AVENGERS = "AV"
-    SPECIAL_GIFT_FLASH = "FL"
-    SPECIAL_GIFT_CAPTAIN = "CA"
-    SPECIAL_GIFT_IRON = "IR"
-
-    SPECIAL_GIFT_CHOICES = [
-        (SPECIAL_GIFT_HULK, "Hulk"),
-        (SPECIAL_GIFT_BATMAN, "Batman"),
-        (SPECIAL_GIFT_WONDER, "Wonder Woman"),
-        (SPECIAL_GIFT_THOR, "Thor"),
-        (SPECIAL_GIFT_SPIDER, "Spider Man"),
-        (SPECIAL_GIFT_AVENGERS, "The Avengers"),
-        (SPECIAL_GIFT_FLASH, "The Flash"),
-        (SPECIAL_GIFT_CAPTAIN, "Captain America"),
-        (SPECIAL_GIFT_IRON, "Iron Man"),
-    ]
-
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -42,24 +19,23 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     country = models.CharField(max_length=40, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    estimated_dispatch_date = models.DateTimeField(auto_now_add=False)
+    estimated_dispatch_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    special_gift_active = models.BooleanField(default=False, editable=False)
-    special_gift = models.CharField(max_length=2, choices=SPECIAL_GIFT_CHOICES, default=SPECIAL_GIFT_BATMAN)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
     def _generate_order_number(self):
-        """ Generates a random, unique order number using UUID """
-
+        """
+        Generate a random, unique order number using UUID
+        """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Update grand total each time a line item is added, accounting for
-        delivery costs.
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
@@ -69,8 +45,8 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Overides the original save method to set the order number if it hasn't
-        already been set
+        Override the original save method to set the order number
+        if it hasn't been set already.
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -90,7 +66,7 @@ class OrderLineItem(models.Model):
         """
         Overides the original save method to set the lineitem total and update the order total.
         """
-        self.lineitem_total = self.prouct.price * self.quantity
+        self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
