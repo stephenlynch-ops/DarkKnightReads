@@ -16,8 +16,8 @@
             <div class="col p-0 text-left">
                 <div aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                      <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category }}</a></li>
+                      <li class="breadcrumb-item"><a href="{% url 'index' %}" class="yellow-breadcrumb">Home</a></li>
+                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category.name }}" class="yellow-breadcrumb">{{ product.category }}</a></li>
                       <li class="breadcrumb-item active" aria-current="page">{{ product.title }} ~ by {{ product.author }}</li>
                     </ol>
                   </div>
