@@ -4,6 +4,8 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
+from django_countries.fields import CountryField
+
 from products.models import Product
 
 
@@ -17,7 +19,7 @@ class Order(models.Model):
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
-    country = models.CharField(max_length=40, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     estimated_dispatch_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
@@ -25,6 +27,7 @@ class Order(models.Model):
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_basket = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    special_instructions = models.TextField(blank=True, null=True)
 
     def _generate_order_number(self):
         """
