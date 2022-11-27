@@ -51,3 +51,13 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
         instance.userprofile.save()
+
+
+class Hero(models.Model):
+    name = models.CharField(max_length=50, null=True, blank=True)
+    friendly_name = models.CharField(max_length=50, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name

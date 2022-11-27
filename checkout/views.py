@@ -58,26 +58,16 @@ def checkout(request):
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your basket wasn't found in our database. "
-                        "Please call us for assistance!")
+                        "One of the products in your basket isn't currently available. "
+                        "Please contact customer support")
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))
@@ -102,11 +92,27 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.user_phone_number,
+                    'country': profile.user_country,
+                    'postcode': profile.user_postcode,
+                    'town_or_city': profile.user_town_or_city,
+                    'street_address1': profile.user_street_address1,
+                    'street_address2': profile.user_street_address2,
+                    'county': profile.user_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing.')
 
     template = 'checkout/checkout.html'
     context = {
@@ -127,11 +133,9 @@ def checkout_success(request, order_number):
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
         if save_info:
             profile_data = {
                 'user_phone_number': order.phone_number,

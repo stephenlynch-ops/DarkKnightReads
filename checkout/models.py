@@ -1,4 +1,5 @@
 import uuid
+from datetime import date, datetime, timedelta
 
 from django.db import models
 from django.db.models import Sum
@@ -24,7 +25,7 @@ class Order(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     country = CountryField(blank_label='Country *', null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    estimated_dispatch_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
+    estimated_days_to_dispatch = models.CharField(max_length=2, default='2', null=True, blank=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
