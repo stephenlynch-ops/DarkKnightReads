@@ -1,1 +1,1 @@
-web: gunicorn darkknightreads.wsgi
+web: gunicorn darkknightreads.wsgi:application
