@@ -17,7 +17,8 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True,
+                                 on_delete=models.SET_NULL)
     title = models.CharField(max_length=350)
     about_title = models.TextField(null=True, blank=True)
     author = models.CharField(max_length=350, null=True, blank=True)
@@ -28,7 +29,8 @@ class Product(models.Model):
     print_length = models.IntegerField(null=True, blank=True)
     language = models.CharField(max_length=254, null=True, blank=True)
     dimensions = models.CharField(max_length=30, null=True, blank=True)
-    release_date = models.DateField(auto_now=False, auto_now_add=False, blank=True, null=True)
+    release_date = models.DateField(auto_now=False, auto_now_add=False,
+                                    blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     hero = models.CharField(max_length=50, blank=True, null=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)

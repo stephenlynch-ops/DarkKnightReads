@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
-from django.contrib.auth.models import User
 from django.conf import settings
 
 from .forms import OrderForm
@@ -13,6 +12,7 @@ from basket.context import basket_contents
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -70,7 +70,8 @@ def checkout(request):
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your basket isn't currently available. "
+                        "One of the products in your basket isn't currently \
+                            available."
                         "Please contact customer support")
                     )
                     order.delete()
@@ -84,7 +85,8 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your basket at the moment")
+            messages.error(request, "There's nothing in your basket at the \
+                moment")
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)

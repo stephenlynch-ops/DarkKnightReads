@@ -31,10 +31,13 @@ class UserProfile(models.Model):
         (ALTER_EGO_WONDER_WOMAN, "Wonder Woman"),
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    alter_ego = models.CharField(max_length=2, choices=ALTER_EGO_CHOICES, default=ALTER_EGO_ANON, null=True, blank=True)
+    alter_ego = models.CharField(max_length=2, choices=ALTER_EGO_CHOICES,
+                                 default=ALTER_EGO_ANON, null=True, blank=True)
     user_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    user_street_address1 = models.CharField(max_length=80, null=True, blank=True)
-    user_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    user_street_address1 = models.CharField(max_length=80, null=True,
+                                            blank=True)
+    user_street_address2 = models.CharField(max_length=80, null=True,
+                                            blank=True)
     user_town_or_city = models.CharField(max_length=40, null=True, blank=True)
     user_postcode = models.CharField(max_length=20, null=True, blank=True)
     user_county = models.CharField(max_length=80, null=True, blank=True)
@@ -42,6 +45,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):

@@ -51,7 +51,8 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search \
+                    criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(title__icontains=query) | Q(about_title__icontains=query) | Q(hero__icontains=query) | Q(author__icontains=query) | Q(about_author__icontains=query)
@@ -68,7 +69,7 @@ def all_products(request):
                 }
     else:
         profile = get_object_or_404(UserProfile, user=request.user)
-    
+
         context = {
             'products': products,
             'search_term': query,
@@ -88,7 +89,7 @@ def product_detail(request, product_id):
 
     if user.id is None:
         context = {
-        'product': product,
+            'product': product,
         }
     else:
         profile = get_object_or_404(UserProfile, user=request.user)
@@ -110,10 +111,12 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'The new product has been added to the store')
+            messages.success(request, 'The new product has been added to the \
+                store')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, "Your new product couldn't be added at this time. Please check the form for errors")
+            messages.error(request, "Your new product couldn't be added at \
+                this time. Please check the form for errors")
     else:
         form = ProductForm()
 
@@ -139,7 +142,8 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully updated {product.title}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please check the form for errors')
+            messages.error(request, 'Failed to update product. Please check \
+                the form for errors')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.title}')

@@ -1,16 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.models import User
 from profiles.models import UserProfile
 
 
 def index(request):
     """ A view to open the home page """
-    user=request.user
+    user = request.user
 
-    if user.id == None:
+    if user.id is None:
 
         return render(request, 'home/index.html')
-    
+
     else:
         profile = get_object_or_404(UserProfile, user=request.user)
         context = {
@@ -18,4 +17,3 @@ def index(request):
         }
 
         return render(request, 'home/index.html', context)
-    

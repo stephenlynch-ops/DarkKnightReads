@@ -151,7 +151,7 @@ def start_migration():
     for file in UPGRADE_FILE_LIST:
         print(f"Processing: {file['filename']}")
         result = process(file["filename"], file["url"])
-        if result == True:
+        if result is True:
             push_and_recreate = True
     
     if push_and_recreate:
