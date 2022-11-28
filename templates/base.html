@@ -8,6 +8,11 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Dark Knight Reads an online comic & graphic novel store, specialising in DC comics and Marvel comics">
+            <meta name="keywords" contents="comics, graphic novels, books, DC, Marvel, Batman, Superman, Wonder Woman, X-Men, The Walking Dead, Rick Grimes, Tintin,
+             Iron Man, Hulk, Thor, Spiderman, Flash, The Avengers, Captain Haddock, Wolverine, Cyclops, Captain America, Doctor Strange, Matt Murdock, Black Panther, 
+              heros, villans, good vs evil, light vs dark, sacrifice, Hal Jordan, Thing, Mr. Fantastic, Invisible Woman, Human Torch, Dick Grayson, Wally West, 
+              Kyle Rayner, Supergirl, Batgirl, Cyborg, Aquaman">
         {% endblock %}
 
         {% block extra_meta %}
@@ -165,6 +170,20 @@
         {% endblock %}
 
         {% block content %}
+        {% endblock %}
+
+        {% block page_footer %}
+        <div class="container footer-container">
+            <div class="row footer-clearance"><div class="col"></div></div>
+            <div class="row social-media-row w-100">
+                <div class="col text-center">
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="fa fa-facebook text-center m-3 py-3 px-0" arai-label="Visit our Facebook business page (opens in a new tab)"></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="fa fa-twitter text-center m-3 py-3 px-0" arai-label="Visit our Twitter page (opens in a new tab)"></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="fa fa-instagram text-center m-3 py-3 px-0" arai-label="Visit our Instagram page (opens in a new tab)"></a>
+                    <a href="https://pintrest.com" target="_blank" rel="noopener" class="fa fa-pinterest text-center m-3 py-3 px-0" arai-label="Visit our Pintrest page (opens in a new tab)"></a>
+                </div>
+            </div>
+        </div>
         {% endblock %}
         
         {% block postloadjs %}
