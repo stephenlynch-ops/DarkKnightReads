@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
+from django.contrib.auth.models import User
 from django.conf import settings
 
 from .forms import OrderForm
@@ -33,6 +34,9 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    profile = None
+    user = request.user
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
@@ -115,11 +119,21 @@ def checkout(request):
         messages.warning(request, 'Stripe public key is missing.')
 
     template = 'checkout/checkout.html'
-    context = {
-        'order_form': order_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
-    }
+
+    if user.id is None:
+        context = {
+            'order_form': order_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+        }
+    else:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        context = {
+            'order_form': order_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+            'profile': profile,
+        }
 
     return render(request, template, context)
 
@@ -130,6 +144,9 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    profile = None
+    user = request.user
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -158,8 +175,15 @@ def checkout_success(request, order_number):
         del request.session['basket']
 
     template = 'checkout/checkout_success.html'
-    context = {
-        'order': order,
-    }
+
+    if user.id is None:
+        context = {
+            'order': order,
+        }
+    else:
+        context = {
+            'order': order,
+            'profile': profile,
+        }
 
     return render(request, template, context)

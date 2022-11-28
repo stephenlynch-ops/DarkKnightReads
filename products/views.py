@@ -59,7 +59,7 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    if user.id == None:
+    if user.id is None:
         context = {
                     'products': products,
                     'search_term': query,
@@ -82,15 +82,21 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show the selected products detail """
-
     product = get_object_or_404(Product, pk=product_id)
+    profile = None
+    user = request.user
 
-    profile = get_object_or_404(UserProfile, user=request.user)
-
-    context = {
+    if user.id is None:
+        context = {
         'product': product,
-        'profile': profile,
-    }
+        }
+    else:
+        profile = get_object_or_404(UserProfile, user=request.user)
+
+        context = {
+            'product': product,
+            'profile': profile,
+        }
 
     return render(request, 'products/product_detail.html', context)
 

@@ -1,13 +1,25 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 from products.models import Product
+from profiles.models import UserProfile
 
 
 def view_basket(request):
     """ A view to render the bage contents """
+    profile = None
+    user = request.user
 
-    return render(request, 'basket/basket.html')
+    if user.id is None:
+        return render(request, 'basket/basket.html')
+    else:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        context = {
+            'profile': profile,
+        }
+
+    return render(request, 'basket/basket.html', context)
 
 
 def add_to_basket(request, item_id):
