@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://darkknightreads.herokuapp.com/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/basket/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?sort=hero&amp;direction=asc</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=batman</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=wonder%20woman</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=superman</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?category=DC</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=x-men</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=iron%20man</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?category=Marvel</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=tintin</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?hero=rick%20grimes</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/?category=Other</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/3/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/2/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/1/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/4/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/6/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/5/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/7/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/8/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/9/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/13/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/11/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/12/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/10/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/14/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/16/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/18/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/products/20/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://darkknightreads.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-11-28T21:55:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
