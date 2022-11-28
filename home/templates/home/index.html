@@ -23,7 +23,7 @@
                 <div class="card text-center h-100 bg-dark">
                     <a href="{% url 'products' %}?hero=batman" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
-                        <img src="/media/batman_image.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <img src="{{ MEDIA_URL }}batman_image.jpg" class="card-img h-100 image-fluid" alt="Batman looking out over Gotham city">
                         <div class="card-img-overlay pt-5">
                             <a href="{% url 'products' %}?hero=batman" class="link-btn btn btn-dark p-2 mt-5">Shop Batman</a>
                         </div>
@@ -34,7 +34,7 @@
                 <div class="card text-center h-100 bg-dark">
                     <a href="{% url 'products' %}?category=DC" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
-                        <img src="/media/dc_comics_super_heroes.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <img src="{{ MEDIA_URL }}dc_comics_super_heroes.jpg" class="card-img h-100 image-fluid" alt="DC comics characters stood together">
                         <div class="card-img-overlay pt-5">
                             <a href="{% url 'products' %}?category=DC" class="link-btn btn btn-dark p-2 mt-5">Shop DC Comics</a>
                         </div>
@@ -48,7 +48,7 @@
                 <div class="card text-center h-100 bg-dark">
                     <a href="{% url 'products' %}?category=DC" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
-                        <img src="/media/marvel_comics_super_heros.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <img src="{{ MEDIA_URL }}marvel_comics_super_heros.jpg" class="card-img h-100 image-fluid" alt="Marvel comics characters stood together">
                         <div class="card-img-overlay pt-5">
                             <a href="{% url 'products' %}?category=Marvel" class="link-btn btn btn-dark p-2 mt-5">Shop Marvel</a>
                         </div>
@@ -59,7 +59,7 @@
                 <div class="card text-center h-100 bg-dark">
                     <a href="{% url 'products' %}?hero=tintin" class="image-link h-100 text-white">
                         <div class="opaque-overlay">&nbsp;</div>
-                        <img src="/media/tintin_characters.jpg" class="card-img h-100 image-fluid" alt="#">
+                        <img src="{{ MEDIA_URL }}tintin_characters.jpg" class="card-img h-100 image-fluid" alt="Tintin characters stood together drinking champagne">
                         <div class="card-img-overlay pt-5">
                             <a href="{% url 'products' %}?category=Other" class="link-btn btn btn-dark p-2 mt-5">Shop Other Publishers</a>
                         </div>
