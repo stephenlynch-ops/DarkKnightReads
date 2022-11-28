@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Hero
+from .models import UserProfile
 
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = (
@@ -10,15 +10,4 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     ordering = ('id',)
 
-
-class HeroAdmin(admin.ModelAdmin):
-    list_display = (
-        'friendly_name',
-        'name',
-        'image',
-    )
-
-    ordering = ('name',)
-
 admin.site.register(UserProfile, UserProfileAdmin)
-admin.site.register(Hero, HeroAdmin)

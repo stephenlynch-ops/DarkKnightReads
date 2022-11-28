@@ -67,7 +67,31 @@
                         <li class="list-inline-item dropdown mx-2">
                             <a class="text-yellow nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center key-link">
-                                    <div class="key-link"><i class="fas fa-user fa-lg"></i></div>
+                                    {% if not profile %}
+                                        <div class="key-link"><i class="fas fa-user fa-lg"></i></div>
+                                    {% else %}
+                                        {% if profile.alter_ego|stringformat:"s" == "HU" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}hulk_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "BA" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}batman_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "WW" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}wonder_woman_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "TH" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}thor_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "SP" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}spiderman_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "AV" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}avengers_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "CA" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}captain_america_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "IR" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}iron_man_badge.jpg" alt="Batman Badge">
+                                        {% elif profile.alter_ego|stringformat:"s" == "FL" %}
+                                            <img class="profile-badge" src="{{ MEDIA_URL }}flash_badge.jpg" alt="Batman Badge">
+                                        {% else %}
+                                            <div class="key-link"><i class="fas fa-user fa-lg"></i></div>
+                                        {% endif %}
+                                    {% endif %}
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
