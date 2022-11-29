@@ -33,6 +33,8 @@ The name Dark Knight Reads comes form a nickname given to Batman, The Dark Knigh
 
 ### Business goals
 
+The aim of the business is to be a place where graphic novel lovers can come and find their next graphic novel. While this cna be accomplished on Amazon, the idea here is that this is a specialist store, so the results aren't diluted with non-graphic novel search / product results, as happens on Amazon.
+
 The aim of the site is to allow users to browse the store with ease in order to pick out the titles they wish to buy.
 
 The site allows users to filter the novels in the store by categories, including publisher, some of the main heros as well as by price. The users also have the ability to search the store by key words of their choosing.
