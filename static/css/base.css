@@ -286,6 +286,16 @@ a:hover {
     background: #cb2027;
     color: white;
   }
+
+/* Mailchimp Signup Styles */
+
+#mc_embed_signup{
+    background: rgb(43, 44, 44);
+    border: 1px solid white;
+    color: #d7e81e;
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;  
+    width:600px;}
   
 /* Media Queries */
   
