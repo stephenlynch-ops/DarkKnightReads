@@ -1,6 +1,6 @@
 # Dark Knight Reads
 
-# INSERT IMAGE OF RESPONSIVE WEBSITE HERE
+<img src="media/am_i_responsive.jpg" alt="Images of the site being responsive">
 
 Dark Knight Reads is an online graphic novel store.
 
@@ -8,12 +8,14 @@ It is aim at the graphic novel fan regardless of the their publishing allegiance
 
 As well as the big two publishers they also sell voels from the smaller publishers. These title have a cult following of their own and are enjoyed around the world.
 
+The name Dark Knight Reads comes form a nickname given to Batman, The Dark Knight.
+
 ## Table of contents
 
 - [UX](#UX)
     - [Business goals](#Business-goals)
     - [User goals](#User-goals)
-    - [Wireframes layout](#Wireframes-layout)
+    - [Layout Design](#Layout-design)
     - [Website pallette](#Website-pallette)
 - [Features](#Features)
 - [Technology](#Technology)
@@ -39,17 +41,51 @@ Users are also able to create a userprofile which, should they choose, gives the
 
 The sites superusers have some CRUD functionality in order to maintain the store, they have the ability to add / edit and remove ites from the store.
 
+### Business marketing stratergy
+
+The business has tried to make use of good SEO practises, by using words associated with its business type throughout the site as well as adding keywords to the meta sections.
+
+The business is also using the email marketing tools from MailChimp that will maintain a communication link between the business and the existing customers in order to generate repeat traffic.
+
+The business also has a Facebook business page in order to spread exposure of the site to users of that platform.
+
+<img src="media/facebook_business_page.jpg" alt="Dark Knight Reads Facebook business page">
+
+The business aims to build a following on that platform with regular posts about products and future events.
+
+<img src="media/facebook_post_image_updated.jpg" style="height: 300px;" alt="Dark Knight Reads Facebook business page">
+
 ### User goals
 
 User can either enter the store with a title in mind or just to browse and see whats available, either way they will find many titles that appeal to them.
 
-### Wireframes layout
+### Layout Design
 
-As part of the design process, I simplly planned the layout using a whiteboard and a pen - I did alot of the planning while commuting.
+As part of the design process, I simply planned the layout using a whiteboard and a pen - I did alot of the planning with my 3 year old son, who helped a lot.
 
-# INSERT IMAGES OF WHITE BOARD PAGE LAYOUTS HERE
+- Initial home layout
 
-<img src="static/images/Wireframes.jpg" alt="Wireframe layout images">
+<img src="media/inital_home_layout.jpg" alt="Initial home page layout idea">
+
+Initially I wanted the heros to be standing side by side when the user enters the site, however due to a lack of good image material this had to be scrapped.
+
+- Final home layout
+
+<img src="media/final_home_layout.jpg" alt="Final home page layout">
+
+The final design has a box grid layout where the boxes are overlapped in the center, giving some a bigger space than others but all siting within a single box container in the middle of the page.
+
+- Weird home layout
+
+<img src="media/weird_home_layout.jpg" alt="Weird home page layout">
+
+I looked at moving the navbar items to a fixed position to the left of the page content, however I scrapped this as it may have ended up confussing the users as the search bar would have to shoot out into the page content.
+
+- Product detail layout
+
+<img src="media/product_list_layout.jpg" alt="Product list layout">
+
+I really liked the product detail layout for Boutique Ado and so simply modified this to suit my needed.
 
 ### Website pallette
 
@@ -93,103 +129,92 @@ As well as the normal login, logout, signin pages.
 
     - There is a section at the  bottom of each page that allows users to sign up for  a newsletter subscription via MailChimps embeded sign up panel.
 
-# INSERT IMAGE OF LANDING PAGE HERE
 
-<img src="media/Landing-Page.jpg" alt="The landing page">
+<img src="media/landing_page.jpg" alt="The landing page">
 
 - The landing page image banner
 
-    - This landing page banner provides the user with a snap shot of the three main pages within the site.
+    - This landing page banner provides the user with a snap shot of the four main categories of novels within the site.
 
-    - The text within the image is clickable and navigates to the text stated destination.
+    - The navbar buttons expand when clicked and give the user the option to pick a category of novel in order to refine the list of novels.
 
-<img src="static/images/Banner-Link-Text.jpg" alt="Banner text that acts as a link on the site" style="height: 100px;">
+    - The buttons within the images takes the user to that category of novels.
 
-The above image shows the banner text that can be clicked - in this case it would take the user to the cafe page.
+<img src="media/navbar_image.jpg" alt="The navbar">
 
-- The landing page trail message
+The above image shows the banner text that can be clicked.
 
-    - This line of text either indicates that the trails are open or gives the user a message stating how mnay hours until the trails open again.
+- The landing page also has a search bar for the users to search for novels based on their own keywords search
 
-<img src="static/images/Trail-Status.jpg" alt="A message showing the trails are open" style="height: 65px;">
+- Below the image links there is the social media section with clickable links to external sites (Facebook, Twitter, Instagram and Pinterest)
 
-- Landing page 'About' section
+- There is also an embeded MailChimp signup box for user to subsrcibe to the newsletter.
 
-    - This section gives the user some basic information about the Black Mountain MTB trails.
+<img src="media/product_list_page.jpg" alt="The products list page">
 
-    - It also provides the ability, via links in the text, to navigate to the trails page, the signup page, login page and the Cafe page.
+- Products List Page
 
-    - There is also an image set to the right of the text to break up the text section and continue to stimulate the user.
+    - This is a grid layout that allows users to scroll through the available books wihtinthe store.
 
-<img src="static/images/Trails-Page.jpg" alt="The trails page">
+    - Each novel has some detail attached for the user to read, this includes, title, publisher, author, illustrator, price.
 
-- The Trails page
+    - If the user is a superuser they also have an edit / delete button in order to user their CRUD functionality.
 
-    - This page is the main hub of the site. It begins by showing 2 large images from the trail as well as a small map image.
+<img src="media/product_detail_page.jpg" alt="The product detail page">
 
-    - There is some key information about the trail, such as its name and difficulty. Each trail name is a link to the article page designed for that trail.
+- Product detail page
 
-    - There is then the article which gives further information about the trail.
+    - This has information about the selected title in more detail.
 
-    - There are further trail images, information and articles below for the user to pick the trail they wish to read about.
+    - This detail includes title, author, illustrated by, price, publisher, about the title, about the author.
 
-<img src="static/images/Trail-Article-Page.jpg" alt="The trails article page">
+    - The key shopping experience section has a qty box for the user to select the qty of the product they wish to buy, a keep shopping button that tkaes them back to the product list page and an 'add to bag' button.
 
-- The trail articles
+<img src="media/basket_page.jpg" alt="The basket page">
 
-    - These pages load the trail information from the database and present it to the user so they can read the detail, apply likes and comment on the articles.
+- The basket page
 
-    - Similar to the trails page these specific trail pages begin with the name and images.
+    - This shows the user the products currently in their basket.
 
-    - There is then the article detail, which is written and posted by the site superusers, via the admin page. followed by the existing comments section.
+    - The structure of this page is a grid, with a smaller image of the title as well as the title, SKU, price, Qty and subtotal sections.
 
-    - If the user has signed up for an account they also have the ability to comment and like articles, these sections are below the article section.
+<img src="media/order_confirmation_page.jpg" alt="Order confirmation page">
 
-    - As part of the commenting process users can indicate how long they have been riding for, this gives riders with a similar level of experience a bench mark to judge the comments by.
+- Order confirmation page
 
-    - Once posted, the user comments are then passed to the admin (superuser) for authorisation and posting to the site.
+    - This gives the user a snapshot of the key details about their completed order.
 
-<img src="static/images/The-Cafe-Page.jpg" alt="The Cafe page">
+    - This is broken into sections within a box. The sections are Order Info, Order Details, Delivering To and Billing Info
 
-- The cafe page
+<img src="media/user_profile_page.jpg" alt="User profile page">
 
-    - This gives the user a brief overview of the cafe facilities and some of the item that can be found there.
+- User profile page
 
-    - There is cake, lots of cake.
+    - Users can add thir key details (not payment information) in their user profile. This saves them time at the checkout later on as it is preloaded within the checkout form.
 
-<img src="static/images/Gallery-Page.jpg" alt="The Gallery page">
+    - They can also pick their alter-ego which modified their account badge at the top of the page.
 
-- The gallery page
+<img src="media/customizable_profile_badge.jpg" alt="Profile badge">
 
-    - This shows some of the images that have been taken of riders riding the trails.
+- Account signup / signout
 
-    - The images are positioned in a grid system where there are large images positioned next to smaller images.
+    - Via the Allauth library, user have the ability to sigup, login and logout of their accounts.
 
-    - The idea is to inspire riders to come and rider the trails.
+    - There is also a 'forgot my password' form for the user to compelte in the event of them forgetting their password. This helps to keep their account safe.
 
-- User accounts
+- Users feedback
 
-    - Users can create there own accounts in order to unlock other features on the site, including commenting on articles and liking posts.
+    - Throughout the site there are toasts that pop-up and give the user feedback on the actiosn they have carried out on the site. For exmaple when they add a product to their basket.
 
-<img src="static/images/Sign-Up-Page.jpg" alt="Account signup page">
-
-- Account signup
-
-    - This is a free account and the users simply need to give their desired username, password - this is optional and set a password.
-
-<img src="static/images/Sign-Out-Page.jpg" alt="Account signout page">
-
-- Account signout
-
-    - Once users wish to leave the site they have the option to signout.
-
-<img src="static/images/Sign-In-Page.jpg" alt="Account signin page">
-
-- Account signin
-
-    - User can then signin when they return to the site.
+<img src="media/user_feedback.jpg" alt="User feedback">
 
 ## Technology
+
+### Security
+
+- The security aspects of the site are handled by the built in csrf token use for securing POST request.
+- Stripe covers the payment security aspects.
+- Aspects of the site that are reserved for superusers are protected by the RequireLogin decorator in the code, so that only superusers can access them.
 
 ### Python / Django
 
@@ -206,7 +231,7 @@ The above image shows the banner text that can be clicked - in this case it woul
 
 - The library for the icons used within the site
 
-### Cloudinary Storage
+### AWS Storage
 
 - The image storage for the site.
 
@@ -222,9 +247,9 @@ The above image shows the banner text that can be clicked - in this case it woul
 
 - Web server for Python.
 
-### Summernote
+### Stripe
 
-- Editor for comments and text fields.
+- Payment processing software, this enables secure payments from the store.
 
 ## Testing
 
@@ -233,6 +258,8 @@ The above image shows the banner text that can be clicked - in this case it woul
 - The site was developed using the Chrome developer tools for the HTML and styling elements.
 
 - The Python testing was carried out using coverage.
+
+# INSERT IMAGE OF COVERAGE REPORT HERE
 
 <img src="static/images/coverage-report.jpg" alt="Coverage report">
 
@@ -374,7 +401,9 @@ The forms were 100% tested, although the form is small and required very little 
 
 - Site has been evaluated by Lighthouse and the report is below.
 
-<img src="static/images/Lighthouse-report.jpg" alt="Lighthouse report">
+<img src="media/lighthouse_report.jpg" alt="Lighthouse report">
+
+- I didn't have time to investigate and rsolve the images in order to improve this score.
 
 ## Deployment
 
@@ -382,65 +411,50 @@ The site is deployed from Heroku.
 
 1. Click deploy from app home page
 
-<img src="static/images/Click-Deploy.jpg" alt="Click deploy section">
-
 2. Click GitHub link in deployment method and link the repository
-
-<img src="static/images/Link-Repo.jpg" alt="Link the GitHub Repo section">
 
 3. Click deploy branch button
 
-<img src="static/images/Deploy-Branch.jpg" alt="Deploy branch button">
-
 4. Click open app button
 
-<img src="static/images/View.jpg" alt="View button">
+# Future developments
+
+- It would be benefical for the site to have a special offers page in order to encourage new users to try a product at a smaller price with the aim of getting them to return in the future.
+
+- Also it would be beneficial to have similiar products on the products detail page, this may encourage users who change their mind on a given product to look into something similiar.
+
+- The themeing of the site could also be linked to the users alter-ego, for example if they like superman, then maybe the site could change fom black and yellow to blue, red and yellow. This would be based on users feedback.
 
 # Credits
 
-- The site is influenced by Komoot, which I use and find easy to navigate and use.
-
-- The national trusts cycling sites were also an influence, in regards to page content.
+- The site is heavily influenced by the Boutique-Ado project.
 
 - The Code Institute Blog and ToDo app walkthoughs were the basis for the inner workings of the site, such as Django and Python functions.
 
-- uLearn on YouTube were the guide used for getting more familiar with Wireframes.
+- StackOverflow proved a valuable resource for solving some of the bugs
 
-- All of the images came from Pexels and the owners of the images are;
-    - Axel Brunst
-    - Hendrik Morkel
-    - Jeremy Bishop
-    - Nick Rickerts
-    - Marina Kuznetsova
-    - Luca Dross
-    - Pixabay
-    - Anastasia Shuraeva
-    - Darcy Lawrey
-    - Jan Kopriva
-    - Lars Mai
-    - Viktoria Alipatova
+- All of the images came from from Google searches and I don't own any of the images.
 
-- The other students on Slack helped me with the testing issues, clearly some had faced the same issue.
+- The other students on Slack helped me with the testing issues, clearly some had faced the same issue, such as the backport issues.
+
+- The tutors at CodeInstitute helped to reolve some version issues I had with Alluth, Django and Heroku.
 
 ## Screenshots
 
 ### Landing Page
-<img src="static/images/Landing-Page.jpg" alt="The landing page">
+<img src="media/landing_page.jpg" alt="The landing page">
 
-### Trails Page
-<img src="static/images/Trails-Page.jpg" alt="The trails page">
+### Product List Page
+<img src="media/product_list_page.jpg" alt="The product list page">
 
-### Trail Article Page
-<img src="static/images/Trail-Article-Page.jpg" alt="The trails article page">
+### Product Detail Page
+<img src="media/product_detail_page.jpg" alt="The product detail page">
 
-### Cafe Page
-<img src="static/images/The-Cafe-Page.jpg" alt="The Cafe page">
+### Checkout Page
+<img src="media/checkout_page.jpg" alt="The checkout page">
 
-### Signup Page
-<img src="static/images/Sign-Up-Page.jpg" alt="Account signup page">
+### Order Confirmation Page
+<img src="media/order_confirmation_page.jpg" alt="The order confirmation page page">
 
-### Signout Page
-<img src="static/images/Sign-Out-Page.jpg" alt="Account signout page">
-
-### Signin Page
-<img src="static/images/Sign-In-Page.jpg" alt="Account signin page">
+### User Profile Page Page
+<img src="media/user_profile_page.jpg" alt="The user profile page">
