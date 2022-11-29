@@ -217,6 +217,7 @@ The above image shows the banner text that can be clicked.
 - The security aspects of the site are handled by the built in csrf token use for securing POST request.
 - Stripe covers the payment security aspects.
 - Aspects of the site that are reserved for superusers are protected by the RequireLogin decorator in the code, so that only superusers can access them.
+- Images are securly stored on Amazons AWS service.
 
 ### Python / Django
 
@@ -348,6 +349,8 @@ The site is deployed from Heroku.
 3. Click deploy branch button
 
 4. Click open app button
+
+As part of the deployment process the static and media files were located onto Amazons AWS S3 platform. The deployment of this can be found on their site.
 
 # Future developments
 
