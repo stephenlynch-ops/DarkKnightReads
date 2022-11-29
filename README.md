@@ -1,12 +1,12 @@
-# Black Mountain MTB Trails website
+# Dark Knight Reads
 
-<img src="static/images/Responsive-Screen-Shot.jpg" alt="Responsive screen shots of the site">
+# INSERT IMAGE OF RESPONSIVE WEBSITE HERE
 
-Black Mountain MTB Trails is a trail center and a mountain bikers dream.
+Dark Knight Reads is an online graphic novel store.
 
-There are world class trails to test all levels of skill as well as 'probably' the best cafe in the world waiting for you when you get back from your ride.
+It is aim at the graphic novel fan regardless of the their publishing allegiance, as they have both DC and Marvel in the store.
 
-This website is designed to show potential visitors what they can find there as well as giving anyone who wishes to sign up to comment on the blogs for the individual trails. In essance giving the riders the chance to communicate directly with the trails and trail builders.
+As well as the big two publishers they also sell voels from the smaller publishers. These title have a cult following of their own and are enjoyed around the world.
 
 ## Table of contents
 
@@ -31,34 +31,51 @@ This website is designed to show potential visitors what they can find there as 
 
 ### Business goals
 
-The aim of the site is to increase the number of visitors to the Black Mountain MTB trail center.
+The aim of the site is to allow users to browse the store with ease in order to pick out the titles they wish to buy.
 
-The site admin has complete CRUD functionality in order to deliver the best possible site experience.
+The site allows users to filter the novels in the store by categories, including publisher, some of the main heros as well as by price. The users also have the ability to search the store by key words of their choosing.
 
-The site admin can add more trail articles as well as update existing articles or delete them as needed.
+Users are also able to create a userprofile which, should they choose, gives them the ability to pick an alter-ego which customises their user experiece (a little bit).
+
+The sites superusers have some CRUD functionality in order to maintain the store, they have the ability to add / edit and remove ites from the store.
 
 ### User goals
 
-Users can get a taster of the trails and facilities that are available at the Black Mountain.
-
-They can read and interact with the posts, by adding comments and likes.
+User can either enter the store with a title in mind or just to browse and see whats available, either way they will find many titles that appeal to them.
 
 ### Wireframes layout
 
-As part of the deisn process I used Balsamiq wireframes software to design the basis of the site.
+As part of the design process, I simplly planned the layout using a whiteboard and a pen - I did alot of the planning while commuting.
+
+# INSERT IMAGES OF WHITE BOARD PAGE LAYOUTS HERE
 
 <img src="static/images/Wireframes.jpg" alt="Wireframe layout images">
 
 ### Website pallette
 
-In keeping with the Black Mountain name I decided to use a dark pallet and have the images and text standout as if they are negatives of the site.
+The pallet was driven by Batmans costume colors. Therefore the site has a dark and edgy feel, while also including a touch of fun - with the font choice.
 
-- Background color: #212529 Which is a very dark grey
-- Font color: #fff Which is a strong white
+- Background color: #000 Which is black
+- Font color: #d7e81e Which is a slightly darker yellow than the standard yellow.
+- Font choice: Bangers for the titles, Oswald for the body text
 
 ## Features
 
-The site is set out over 5 pages, with a consistant navbar feature running throughout the site.
+The site has 6 main pages that users will navigate through. These pages are;
+
+- Landing page
+
+- Product list page
+
+- Product detail page
+
+- Basket page
+
+- Checkout page
+
+- User profile page
+
+As well as the normal login, logout, signin pages.
 
 ### Existing Features
 
@@ -66,13 +83,19 @@ The site is set out over 5 pages, with a consistant navbar feature running throu
 
     - Navigation bar is presented in the same format on all pages to avoid any confusion when navigating the site.
     
-    - Featured on all pages within the site to allow navigation from any page to any other page.
+    - Featured on all pages within the site to allow navigation from any page to any other page as the site title, search and navbar sections stay visible on each page.
 
 - Social media links
 
     - These, like the navbar, are present on all pages and link to the sites social media pages. The links open in a new tab.
 
-<img src="static/images/Landing-Page.jpg" alt="The landing page">
+- Mailchimp newsletter sign up
+
+    - There is a section at the  bottom of each page that allows users to sign up for  a newsletter subscription via MailChimps embeded sign up panel.
+
+# INSERT IMAGE OF LANDING PAGE HERE
+
+<img src="media/Landing-Page.jpg" alt="The landing page">
 
 - The landing page image banner
 
