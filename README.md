@@ -342,13 +342,29 @@ These tests check to see if the required fields on the form are flagged as error
 
 The site is deployed from Heroku.
 
-1. Click deploy from app home page
+1. Click new app from Heroku main page
 
-2. Click GitHub link in deployment method and link the repository
+<img src="media/1_new_app.png" alt="New app button">
 
-3. Click deploy branch button
+2. Give the app a name and select the deployment region (Europe in this case)
 
-4. Click open app button
+<img src="media/2_name_region.png" alt="App name and region options">
+
+3. Under the settings tab we add the config vars - Database URL / Secret key etc.
+
+<img src="media/3_config_vars.png" alt="Config vars">
+
+4. Under the 'Deploy' tab we the link our Heroku app to our GitHub repoository.
+
+<img src="media/4_github_connection.png" alt="GitHub Repo connection">
+
+5. At the bottom of the 'Deploy' tab page we then click on the 'Deploy Branch' button in the 'Manual Deployment' section, this starts the building of the app.
+
+<img src="media/5_manual_deployment.png" alt="Manual deployment button">
+
+6. When the build is complete we then click the 'view app' button to see the app.
+
+<img src="media/6_view_app.png" alt="View app button">
 
 As part of the deployment process the static and media files were located onto Amazons AWS S3 platform. The deployment of this can be found on their site.
 
